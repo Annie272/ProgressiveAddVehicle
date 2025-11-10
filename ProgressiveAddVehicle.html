@@ -231,14 +231,14 @@
       <div id="otherLocationFields" class="hidden">
         <div class="mb-4">
           <label for="00NU7000006Drkb" class="block text-sm font-medium text-gray-700">
-            Primary location address<span class="star">*</span>
+            Primary location address 1<span class="star">*</span>
           </label>
           <input id="00NU7000006Drkb" maxlength="255" name="00NU7000006Drkb" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000007QpFl" class="block text-sm font-medium text-gray-700">
-            Primary location address<span class="star">*</span>
+            Primary location address 2
           </label>
           <input id="00NU7000007QpFl" maxlength="255" name="00NU7000007QpFl" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
@@ -274,21 +274,21 @@
       <div id="lienholderFields" class="hidden">
         <div class="mb-4">
           <label for="00NU7000007QpKb" class="block text-sm font-medium text-gray-700">
-            Lienholder<span class="star">*</span>
+            Lienholder Name<span class="star">*</span>
           </label>
           <input id="00NU7000007QpKb" maxlength="100" name="00NU7000007QpKb" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000007QpPR" class="block text-sm font-medium text-gray-700">
-             Address<span class="star">*</span>
+             Address 1<span class="star">*</span>
           </label>
           <input id="00NU7000007QpPR" maxlength="100" name="00NU7000007QpPR" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000007QpUH" class="block text-sm font-medium text-gray-700">
-            Address<span class="star">*</span>
+            Address 2
           </label>
           <input id="00NU7000007QpUH" maxlength="100" name="00NU7000007QpUH" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
@@ -701,15 +701,15 @@ document.addEventListener("DOMContentLoaded", function () {
       fields.push(mustFill("00NU7000006AY3N", "Miles one way to work or school"));
     }
     if (getRadioValue("primaryLocation") === "other") {
-      fields.push(mustFill("00NU7000006Drkb", "Primary location address"));
-      fields.push(mustFill("00NU7000007QpFl", "Primary location address"));
+      fields.push(mustFill("00NU7000006Drkb", "Primary location address 1"));
+      //fields.push(mustFill("00NU7000007QpFl", "Primary location address 2"));
       fields.push(mustFill("00NU7000005zvUj", "City"));
       fields.push(mustFill("00NU7000006cbfp", "Zip Code"));
     }
     if (financedSelect.value === "Lease" || financedSelect.value === "Own and make payments") {
-      fields.push(mustFill("00NU7000007QpKb", "Lienholder"));
-      fields.push(mustFill("00NU7000007QpPR", "Address"));
-      fields.push(mustFill("00NU7000007QpUH", "Address"));
+      fields.push(mustFill("00NU7000007QpKb", "Lienholder Name"));
+      fields.push(mustFill("00NU7000007QpPR", "Address 1"));
+      //fields.push(mustFill("00NU7000007QpUH", "Address 2"));
       fields.push(mustFill("00NU7000007QpcL", "City"));
       fields.push(mustFill("00NU7000005zvWL", "State"));
       fields.push(mustFill("00NU7000007QfZm", "ZIP code"));
