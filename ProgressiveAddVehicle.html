@@ -483,14 +483,32 @@
     </select>
   </div>
 
+     <div class="mb-6">
+  <label for="00NU7000007QrCj" class="block text-sm font-medium text-gray-700 mb-2">
+    Custom Parts and/or Equipment value<span class="star">*</span>
+  </label>
+  
+  <!-- Mini info box -->
+  <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-3 shadow-sm">
+    <div class="flex items-start">
+      <div class="w-5 h-5 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0 mt-0.5">
+        i
       </div>
-      <div class="mb-4">
-        <label for="00NU7000007QrCj" class="block text-sm font-medium text-gray-700">
-          Custom Parts and/or Equipment value<span class="star">*</span>
-        </label>
-        <input id="00NU7000007QrCj" maxlength="30" name="00NU7000007QrCj" type="text"
-          class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
-      </div>
+      <p class="text-xs text-gray-700 leading-relaxed">
+        Custom parts or equipment are accessories and enhancements permanently installed in or on the insured's vehicle.
+      </p>
+    </div>
+  </div>
+  
+  <input 
+    id="00NU7000007QrCj" 
+    maxlength="30" 
+    name="00NU7000007QrCj" 
+    type="text"
+    class="w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+    placeholder="e.g., $2500"
+  />
+</div>
       <div class="mb-4">
     <span class="block text-sm font-medium text-gray-700">
       Loan/Lease Payoff<span class="star">*</span>
@@ -539,8 +557,6 @@
     <input type="hidden" name="lead_source" value="Web Form" />
     <input type="hidden" name="company" value="Caelius Test Progressive Add Vehicle" />
     <input type="hidden" name="Debug_Notes__c" value="Safeco Test: 2025-06-27 07:21AM" />
-              <input type="hidden" name="Carrier__c" value ="Progressive">
-
 
     <div class="flex justify-end mt-6">
       <button
@@ -582,7 +598,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
   // Pikaday date picker for Effective Date
   if (window.Pikaday) {
@@ -602,7 +618,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // *** Pikaday for "Purchase Date" ***
+  // Pikaday for "Purchase Date"
   if (window.Pikaday) {
     new Pikaday({
       field: document.getElementById("00NU7000007Vz4n"),
@@ -691,7 +707,7 @@ document.addEventListener("DOMContentLoaded", function () {
   syncRadioToSelect("vinKnown", "00NU7000006NiT7");
   syncRadioToSelect("ridesharing", "00NU7000007QIDN");
 
-  // *** Show/Hide Purchase Date field for Loan/Lease Payoff = "Selected" ***
+  // Show/Hide Purchase Date field for Loan/Lease Payoff = "Selected"
   const loanLeasePayoffRadios = document.querySelectorAll('input[name="loanLeasePayoff"]');
   const purchaseDateField = document.getElementById("purchaseDateField");
   function updatePurchaseDateVisibility() {
@@ -709,6 +725,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const proceedBtn = document.getElementById("proceedBtn");
   const editBtn = document.getElementById("editBtn");
   const form = document.getElementById("mainForm");
+
+  // Add hidden field for summary data
+  const formDataJsonInput = document.createElement("input");
+  formDataJsonInput.type = "hidden";
+  formDataJsonInput.name = "Form_Captured_Data__c";
+  formDataJsonInput.id = "formDataJson";
+  form.appendChild(formDataJsonInput);
 
   function mustFill(name, label, type = null) {
     return { name, label, type };
@@ -744,22 +767,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if (getRadioValue("primaryLocation") === "other") {
       fields.push(mustFill("00NU7000006Drkb", "Primary location address 1"));
-      //fields.push(mustFill("00NU7000007QpFl", "Primary location address 2"));
       fields.push(mustFill("00NU7000005zvUj", "City"));
       fields.push(mustFill("00NU7000006cbfp", "Zip Code"));
     }
     if (financedSelect.value === "Lease" || financedSelect.value === "Own and make payments") {
       fields.push(mustFill("00NU7000007QpKb", "Lienholder Name"));
       fields.push(mustFill("00NU7000007QpPR", "Address 1"));
-      //fields.push(mustFill("00NU7000007QpUH", "Address 2"));
       fields.push(mustFill("00NU7000007QpcL", "City"));
       fields.push(mustFill("00NU7000005zvWL", "State"));
       fields.push(mustFill("00NU7000007QfZm", "ZIP code"));
     }
-    // Require Purchase Date only when visible
-    if (
-      Array.from(document.querySelectorAll('input[name="loanLeasePayoff"]')).find(r => r.checked && r.value === "Selected")
-    ) {
+    if (Array.from(document.querySelectorAll('input[name="loanLeasePayoff"]')).find(r => r.checked && r.value === "Selected")) {
       fields.push(mustFill("00NU7000007Vz4n", "Please Enter Purchase Date", "date"));
     }
     return fields;
@@ -767,36 +785,83 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateFields() {
     const missing = [];
+    const completed = [];
     getRequiredFields().forEach(field => {
       if (field.radio) {
         const radios = document.querySelectorAll(`input[name="${field.radio}"]`);
         if (!radios.length) return;
         const checked = [...radios].some(r => r.checked);
-        if (!checked) missing.push(field.label);
+        if (!checked) {
+          missing.push(field.label);
+        } else {
+          const checkedVal = Array.from(radios).find(r => r.checked).value;
+          completed.push(`${field.label} = ${checkedVal}`);
+        }
         return;
       }
       const el = document.getElementById(field.name);
       if (!el) return;
+      const val = el.value.trim();
       if (field.type === "email") {
-        if (!el.value.trim() || !el.checkValidity()) missing.push(field.label);
+        if (!val || !el.checkValidity()) {
+          missing.push(field.label);
+        } else {
+          completed.push(`${field.label} = ${val}`);
+        }
       } else if (field.type === "date") {
-        const val = el.value.trim();
         const dateRegex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(1[0-9]{3}|2[0-9]{3}|30[0-9]{2})$/;
-        if (!val || !dateRegex.test(val)) missing.push(field.label);
+        if (!val || !dateRegex.test(val)) {
+          missing.push(field.label);
+        } else {
+          completed.push(`${field.label} = ${val}`);
+        }
       } else if (el.tagName === "SELECT") {
-        if (!el.value.trim()) missing.push(field.label);
+        if (!val) {
+          missing.push(field.label);
+        } else {
+          completed.push(`${field.label} = ${val}`);
+        }
       } else {
-        if (!el.value.trim()) missing.push(field.label);
+        if (!val) {
+          missing.push(field.label);
+        } else {
+          completed.push(`${field.label} = ${val}`);
+        }
       }
     });
-    return missing;
+    return { missing, completed };
+  }
+
+  function getFieldInputValue(field) {
+    if (field.radio) {
+      const radios = document.querySelectorAll(`input[name="${field.radio}"]`);
+      const checked = Array.from(radios).find(r => r.checked);
+      return checked ? checked.value : "";
+    }
+    const el = document.getElementById(field.name);
+    return el ? el.value.trim() : "";
   }
 
   reviewBtn.addEventListener("click", () => {
-    const missing = validateFields();
+    const { missing, completed } = validateFields();
+    const missingData = [];
+    const completedData = [];
+
+    getRequiredFields().forEach(field => {
+      const val = getFieldInputValue(field);
+      if (!val) {
+        missingData.push(`${field.label}${val ? " = " + val : ""}`);
+      } else {
+        completedData.push(`${field.label} = ${val}`);
+      }
+    });
+
+    const formatted = `Missing Data - \n[${missingData.join(",\n")}]\nCompleted Data-\n [${completedData.join(",\n")}]`;
+    formDataJsonInput.value = formatted;
+
     if (missing.length) {
       dialogTitle.textContent = "Below Mandatory Fields are missing and the Team will contact you shortly.";
-      missingFieldsList.innerHTML = missing.map((f) => `<li>${f}</li>`).join("");
+      missingFieldsList.innerHTML = missing.map(f => `<li>${f}</li>`).join("");
     } else {
       dialogTitle.textContent = "All mandatory fields are completed. Ready to submit your request?";
       missingFieldsList.innerHTML = "";
@@ -805,22 +870,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   editBtn.addEventListener("click", () => { dialog.classList.add("hidden"); });
+  proceedBtn.addEventListener("click", () => { dialog.classList.add("hidden"); form.submit(); });
 
-  proceedBtn.addEventListener("click", () => {
-    dialog.classList.add("hidden");
-    form.submit();
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === dialog) dialog.classList.add("hidden");
-  });
-
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !dialog.classList.contains("hidden")) {
-      dialog.classList.add("hidden");
-    }
-  });
+  window.addEventListener("click", (e) => { if (e.target === dialog) dialog.classList.add("hidden"); });
+  window.addEventListener("keydown", (e) => { if (e.key === "Escape" && !dialog.classList.contains("hidden")) dialog.classList.add("hidden"); });
 });
-  </script>
+</script>
 </body>
 </html>
