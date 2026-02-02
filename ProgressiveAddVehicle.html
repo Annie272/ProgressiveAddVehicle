@@ -55,7 +55,7 @@
           </label>
         </div>
         <!-- Hidden select field mapped to radio buttons -->
-        <select id="00NU7000006IOzh" name="00NU7000006IOzh" class="hidden">
+        <select id="00NU7000006IOzh" name="Is_this_a_quote_or_a_change_request__c" class="hidden">
           <option value=""></option>
           <option value="Y">Y</option>
           <option value="N">N</option>
@@ -66,7 +66,7 @@
         <input
           type="text"
           id="00NU7000005zuX3"
-          name="00NU7000005zuX3"
+          name="Policy_Number__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
           autocomplete="off"
         />
@@ -76,7 +76,7 @@
         <input
           type="text"
           id="00NU7000005zuLl"
-          name="00NU7000005zuLl"
+          name="Date__c"
           placeholder="MM/DD/YYYY"
           maxlength="10"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -92,7 +92,7 @@
     <label for="00NU7000007QI0T" class="block text-sm font-medium text-gray-700">
       Please Enter the Year of Vehicle to Add:<span class="star">*</span>
     </label>
-    <input id="00NU7000007QI0T" maxlength="30" name="00NU7000007QI0T" type="text"
+    <input id="00NU7000007QI0T" maxlength="30" name="Please_Enter_the_Year_of_Vehicle_to_Add__c" type="text"
       class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
   </div>
   <!-- Do you know the VIN of the New Vehicle? Radios -->
@@ -109,7 +109,7 @@
       </label>
     </div>
     <!-- Hidden select mapped to Salesforce field -->
-    <select id="00NU7000006NiT7" name="00NU7000006NiT7" title="Do you know the VIN of the New Vehicle?" class="hidden">
+    <select id="00NU7000006NiT7" name="Do_you_know_the_VIN_of_this_vehicle_2__c" title="Do you know the VIN of the New Vehicle?" class="hidden">
       <option value="">--None--</option>
       <option value="Y">Y</option>
       <option value="N">N</option>
@@ -119,7 +119,7 @@
     <label for="00NU7000006Knh3" class="block text-sm font-medium text-gray-700">
       VIN Number<span class="star">*</span>
     </label>
-    <input id="00NU7000006Knh3" maxlength="255" name="00NU7000006Knh3" type="text"
+    <input id="00NU7000006Knh3" maxlength="255" name="VIN_number_2__c" type="text"
       class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
   </div>
 </section>
@@ -131,7 +131,7 @@
         <label for="00NU700000618Xx" class="block text-sm font-medium text-gray-700">
           Primary Use<span class="star">*</span>
         </label>
-        <select id="00NU700000618Xx" name="00NU700000618Xx"
+        <select id="00NU700000618Xx" name="Primary_Use__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
           <option value="">--None--</option>
           <option value="Commute">Commute</option>
@@ -155,7 +155,7 @@
           </label>
         </div>
         <!-- Hidden select for Salesforce mapping (FIXED) -->
-        <select id="00NU7000007QIDN" name="00NU7000007QIDN" class="hidden">
+        <select id="00NU7000007QIDN" name="Is_this_vehicle_used_for_ridesharing__c" class="hidden">
           <option value="">--None--</option>
           <option value="Y">Y</option>
           <option value="N">N</option>
@@ -165,7 +165,7 @@
         <label for="00NU7000007QqQM" class="block text-sm font-medium text-gray-700">
           Annual mileage<span class="star">*</span>
         </label>
-        <select id="00NU7000007QqQM" name="00NU7000007QqQM"
+        <select id="00NU7000007QqQM" name="Annual_mileage__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
           <!-- options omitted for brevity same as above… -->
           <option value="0 - 3,999 miles">0 - 3,999 miles</option>
@@ -190,7 +190,7 @@
           <label for="00NU7000006AXyX" class="block text-sm font-medium text-gray-700">
             Current number of days commuting to work or school<span class="star">*</span>
           </label>
-          <select id="00NU7000006AXyX" name="00NU7000006AXyX"
+          <select id="00NU7000006AXyX" name="Days_commuting_to_work_school__c"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -205,7 +205,7 @@
           <label for="00NU7000006AY3N" class="block text-sm font-medium text-gray-700">
             Miles one way to work or school<span class="star">*</span>
           </label>
-          <input id="00NU7000006AY3N" maxlength="18" name="00NU7000006AY3N" type="text"
+          <input id="00NU7000006AY3N" maxlength="18" name="Miles_one_way_to_work_or_school__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
       </div>
@@ -222,7 +222,7 @@
       </label>
     </div>
     <!-- Hidden select mapped to Salesforce field -->
-    <select id="00NU7000007QqVB" name="00NU7000007QqVB" class="hidden">
+    <select id="00NU7000007QqVB" name="Primary_location_Progressive__c" class="hidden">
       <option value="mailing">mailing</option>
       <option value="other">other</option>
     </select>
@@ -233,28 +233,28 @@
           <label for="00NU7000006Drkb" class="block text-sm font-medium text-gray-700">
             Primary location address 1<span class="star">*</span>
           </label>
-          <input id="00NU7000006Drkb" maxlength="255" name="00NU7000006Drkb" type="text"
+          <input id="00NU7000006Drkb" maxlength="255" name="Primary_location_address__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000007QpFl" class="block text-sm font-medium text-gray-700">
             Primary location address 2
           </label>
-          <input id="00NU7000007QpFl" maxlength="255" name="00NU7000007QpFl" type="text"
+          <input id="00NU7000007QpFl" maxlength="255" name="Primary_location_address_2__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000005zvUj" class="block text-sm font-medium text-gray-700">
             City<span class="star">*</span>
           </label>
-          <input id="00NU7000005zvUj" maxlength="30" name="00NU7000005zvUj" type="text"
+          <input id="00NU7000005zvUj" maxlength="30" name="City__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000006cbfp" class="block text-sm font-medium text-gray-700">
             Zip Code<span class="star">*</span>
           </label>
-          <input id="00NU7000006cbfp" maxlength="30" name="00NU7000006cbfp" type="text"
+          <input id="00NU7000006cbfp" maxlength="30" name="Interest_Zip_Code__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
       </div>
@@ -262,7 +262,7 @@
         <label for="00NU700000616cb" class="block text-sm font-medium text-gray-700">
           Vehicle financed, leased or owned<span class="star">*</span>
         </label>
-        <select id="00NU700000616cb" name="00NU700000616cb"
+        <select id="00NU700000616cb" name="Vehicle_financed_leased_or_owned__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
           <option value="">--None--</option>
           <option value="Lease">Lease</option>
@@ -276,35 +276,35 @@
           <label for="00NU7000007QpKb" class="block text-sm font-medium text-gray-700">
             Lienholder Name<span class="star">*</span>
           </label>
-          <input id="00NU7000007QpKb" maxlength="100" name="00NU7000007QpKb" type="text"
+          <input id="00NU7000007QpKb" maxlength="100" name="Lienholder__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000007QpPR" class="block text-sm font-medium text-gray-700">
              Address 1<span class="star">*</span>
           </label>
-          <input id="00NU7000007QpPR" maxlength="100" name="00NU7000007QpPR" type="text"
+          <input id="00NU7000007QpPR" maxlength="100" name="Lienholder_Address_1__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000007QpUH" class="block text-sm font-medium text-gray-700">
             Address 2
           </label>
-          <input id="00NU7000007QpUH" maxlength="100" name="00NU7000007QpUH" type="text"
+          <input id="00NU7000007QpUH" maxlength="100" name="Lienholder_Address_2__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000007QpcL" class="block text-sm font-medium text-gray-700">
              City<span class="star">*</span>
           </label>
-          <input id="00NU7000007QpcL" maxlength="50" name="00NU7000007QpcL" type="text"
+          <input id="00NU7000007QpcL" maxlength="50" name="Lienholder_City__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
         <div class="mb-4">
           <label for="00NU7000005zvWL" class="block text-sm font-medium text-gray-700">
             State<span class="star">*</span>
           </label>
-          <select id="00NU7000005zvWL" name="00NU7000005zvWL"
+          <select id="00NU7000005zvWL" name="State__c"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
             <!-- States options as above -->
             <option value="">--None--</option>
@@ -384,7 +384,7 @@
           <label for="00NU7000007QfZm" class="block text-sm font-medium text-gray-700">
             ZIP code<span class="star">*</span>
           </label>
-          <input id="00NU7000007QfZm" maxlength="30" name="00NU7000007QfZm" type="text"
+          <input id="00NU7000007QfZm" maxlength="30" name="Lienholder_ZIP_code__c" type="text"
             class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm" />
         </div>
       </div>
@@ -392,7 +392,7 @@
         <label for="00NU7000007QpCX" class="block text-sm font-medium text-gray-700">
           Length of vehicle ownership<span class="star">*</span>
         </label>
-        <select id="00NU7000007QpCX" name="00NU7000007QpCX"
+        <select id="00NU7000007QpCX" name="Length_of_vehicle_ownership__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
           <option value="">--None--</option>
           <option value="Less than 1 month">Less than 1 month</option>
@@ -411,7 +411,7 @@
         <label for="00NU700000618bB" class="block text-sm font-medium text-gray-700">
           Comprehensive<span class="star">*</span>
         </label>
-        <select id="00NU700000618bB" name="00NU700000618bB"
+        <select id="00NU700000618bB" name="Comprehensive__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
           <option value="No Coverage">No Coverage</option>
           <option value="$100 deductible">$100 deductible</option>
@@ -434,7 +434,7 @@
         <label for="00NU700000618cn" class="block text-sm font-medium text-gray-700">
           Collision<span class="star">*</span>
         </label>
-        <select id="00NU700000618cn" name="00NU700000618cn"
+        <select id="00NU700000618cn" name="Collision__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
           <option value="No Coverage">No Coverage</option>
           <option value="$100 deductible">$100 deductible</option>
@@ -450,7 +450,7 @@
         <label for="00NU700000618eP" class="block text-sm font-medium text-gray-700">
           Rental Reimbursement<span class="star">*</span>
         </label>
-        <select id="00NU700000618eP" name="00NU700000618eP"
+        <select id="00NU700000618eP" name="Rental_Reimbursement__c"
           class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm">
           <option value="No Coverage">No Coverage</option>
           <option value="$40 each day/maximum 30 days">$40 each day/maximum 30 days</option>
@@ -475,7 +475,7 @@
       </label>
     </div>
     <!-- Hidden select mapped to Salesforce field -->
-    <select id="00NU700000618hd" name="00NU700000618hd" class="hidden">
+    <select id="00NU700000618hd" name="Roadside_Assistance__c" class="hidden">
       <option value="">--None--</option>
       <option value="No Coverage">No Coverage</option>
       <option value="Selected">Selected</option>
@@ -503,7 +503,7 @@
   <input 
     id="00NU7000007QrCj" 
     maxlength="30" 
-    name="00NU7000007QrCj" 
+    name="Custom_Parts_and_or_Equipment_value__c" 
     type="text"
     class="w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
     placeholder="e.g., $2500"
@@ -522,7 +522,7 @@
       </label>
     </div>
     <!-- Hidden select mapped to Salesforce field -->
-    <select id="00NU7000007Qqzp" name="00NU7000007Qqzp" class="hidden">
+    <select id="00NU7000007Qqzp" name="Loan_Lease_Payoff__c" class="hidden">
       <option value="">--None--</option>
       <option value="No Coverage">No Coverage</option>
       <option value="Selected">Selected</option>
@@ -535,7 +535,7 @@
   </label>
   <input
     id="00NU7000007Vz4n"
-    name="00NU7000007Vz4n"
+    name="Please_Enter_Purchase_Date__c"
     size="12"
     type="text"
     class="mt-1 w-full p-2 border border-gray-300 rounded-lg shadow-sm"
@@ -548,17 +548,18 @@
     <!-- Hidden Salesforce fields -->
     <input type="hidden" name="delete_Action_Form__c" value="1" />
     <input type="hidden" name="oid" value="00DU7000006EuID" />
-    <input type="hidden" name="recordType" id="recordType" value="012U7000003Hjv3IAC" />
     <input type="hidden" name="retURL" value="https://bennettandporter.com/" />
     <input type="hidden" name="first_name" value="Progressive Add Vehicle" />
-    <input type="hidden" name="last_name" value="Test Demo" />
+    <input type="hidden" name="last_name" value="Test" />
     <input type="hidden" name="status" value="New" />
-    <input type="hidden" name="phone" value="28436836129" />
+    <input type="hidden" name="phone" value="23136836129" />
     <input type="hidden" name="lead_source" value="Web Form" />
-    <input type="hidden" name="company" value="Caelius Test Progressive Add Vehicle" />
-    <input type="hidden" name="Debug_Notes__c" value="Safeco Test: 2025-06-27 07:21AM" />
-    <input type="hidden" id="00NU7000007OdKL" name="00NU7000007OdKL" value="Progressive" />
-    <input type="hidden" id="00NU7000005zuNN" name="00NU7000005zuNN" value="Add Vehicle" />
+    <input type="hidden" name="company" value="Progressive Add Vehicle" />
+    <input type="hidden" id="00NU7000007OdKL" name="Carrier__c" value="Progressive" />
+    <input type="hidden" id="00NU7000005zuNN" name="Policy_Action__c" value="Add Vehicle" />
+    <input type="hidden" name="Form_Captured_Data__c" />
+    <input type="hidden" name="Form_Missing_Data__c" />
+
 
     <div class="flex justify-end mt-6">
       <button
@@ -599,283 +600,228 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Pikaday date picker for Effective Date
-  if (window.Pikaday) {
+
+  /* ================= DATE PICKERS ================= */
+
+  function attachPikaday(id) {
+    const field = document.getElementById(id);
+    if (!field || !window.Pikaday) return;
     new Pikaday({
-      field: document.getElementById("00NU7000005zuLl"),
+      field,
       format: "MM/DD/YYYY",
       toString(date) {
-        const d = String(date.getDate()).padStart(2, "0");
-        const m = String(date.getMonth() + 1).padStart(2, "0");
-        const y = date.getFullYear();
-        return `${m}/${d}/${y}`;
+        return `${String(date.getMonth()+1).padStart(2,'0')}/${String(date.getDate()).padStart(2,'0')}/${date.getFullYear()}`;
       },
-      parse(dateString) {
-        const [m, d, y] = dateString.split("/");
-        return new Date(y, m - 1, d);
-      },
+      parse(str) {
+        const [m,d,y] = str.split("/");
+        return new Date(y, m-1, d);
+      }
     });
   }
 
-  // Pikaday for "Purchase Date"
-  if (window.Pikaday) {
-    new Pikaday({
-      field: document.getElementById("00NU7000007Vz4n"),
-      format: "MM/DD/YYYY",
-      toString(date) {
-        const d = String(date.getDate()).padStart(2, "0");
-        const m = String(date.getMonth() + 1).padStart(2, "0");
-        const y = date.getFullYear();
-        return `${m}/${d}/${y}`;
-      },
-      parse(dateString) {
-        const [m, d, y] = dateString.split("/");
-        return new Date(y, m - 1, d);
-      },
-    });
-  }
+  attachPikaday("00NU7000005zuLl");
+  attachPikaday("00NU7000007Vz4n");
 
-  // Map radio buttons to hidden select for requestType
+  /* ================= REQUEST TYPE RADIO ================= */
+
   const radios = document.querySelectorAll('input[name="requestTypeRadios"]');
   const hiddenSelect = document.getElementById("00NU7000006IOzh");
+
   function syncRequestType() {
-    const checkedRadio = document.querySelector('input[name="requestTypeRadios"]:checked');
-    hiddenSelect.value = checkedRadio ? checkedRadio.value : "";
+    const checked = document.querySelector('input[name="requestTypeRadios"]:checked');
+    hiddenSelect.value = checked ? checked.value : "";
   }
-  radios.forEach((radio) => { radio.addEventListener("change", syncRequestType); });
-  if (hiddenSelect.value !== "") {
-    const matchedRadio = document.querySelector(`input[name="requestTypeRadios"][value="${hiddenSelect.value}"]`);
-    if (matchedRadio) matchedRadio.checked = true;
-  } else hiddenSelect.value = "";
+  radios.forEach(r => r.addEventListener("change", syncRequestType));
   syncRequestType();
 
-  // Conditional display logic
+  /* ================= CONDITIONAL DISPLAY ================= */
+
   const primaryUse = document.getElementById("00NU700000618Xx");
   const commuteFields = document.getElementById("commuteFields");
-  function toggleCommuteFields() {
-    commuteFields.classList.toggle("hidden", primaryUse.value !== "Commute");
+  if (primaryUse) {
+    function toggleCommute() {
+      commuteFields.classList.toggle("hidden", primaryUse.value !== "Commute");
+    }
+    primaryUse.addEventListener("change", toggleCommute);
+    toggleCommute();
   }
-  primaryUse.addEventListener("change", toggleCommuteFields);
 
   function getRadioValue(name) {
-    const rds = document.querySelectorAll(`input[name="${name}"]`);
-    const checked = Array.from(rds).find(r => r.checked);
-    return checked ? checked.value : "";
+    const r = [...document.querySelectorAll(`input[name="${name}"]`)].find(x => x.checked);
+    return r ? r.value : "";
   }
-  const primaryLocationRadios = document.querySelectorAll('input[name="primaryLocation"]');
+
   const otherLocationFields = document.getElementById("otherLocationFields");
-  function toggleOtherLocationFields() {
+  const primaryLocationRadios = document.querySelectorAll('input[name="primaryLocation"]');
+
+  function toggleOtherLocation() {
     otherLocationFields.classList.toggle("hidden", getRadioValue("primaryLocation") !== "other");
   }
-  primaryLocationRadios.forEach(r => r.addEventListener("change", toggleOtherLocationFields));
-  toggleOtherLocationFields();
+  primaryLocationRadios.forEach(r => r.addEventListener("change", toggleOtherLocation));
+  toggleOtherLocation();
 
   const financedSelect = document.getElementById("00NU700000616cb");
   const lienholderFields = document.getElementById("lienholderFields");
-  function toggleLienholderFields() {
-    lienholderFields.classList.toggle(
-      "hidden",
-      !(financedSelect.value === "Lease" || financedSelect.value === "Own and make payments")
-    );
-  }
-  financedSelect.addEventListener("change", toggleLienholderFields);
-  toggleLienholderFields();
 
-  // Sync radio groups to corresponding hidden Salesforce selects
+  function toggleLienholder() {
+    lienholderFields.classList.toggle("hidden",
+      !(financedSelect.value === "Lease" || financedSelect.value === "Own and make payments"));
+  }
+  financedSelect.addEventListener("change", toggleLienholder);
+  toggleLienholder();
+
+  /* ================= RADIO → SELECT SYNC ================= */
+
   function syncRadioToSelect(radioName, selectId) {
     const radios = document.querySelectorAll(`input[name="${radioName}"]`);
     const select = document.getElementById(selectId);
     if (!select) return;
+
     radios.forEach(radio => {
       radio.addEventListener("change", () => {
-        if (radio.checked) {
-          select.value = radio.value;
-        }
+        if (radio.checked) select.value = radio.value;
       });
     });
-    const checked = Array.from(radios).find(r => r.checked);
-    if (checked) {
-      select.value = checked.value;
-    }
+
+    const checked = [...radios].find(r => r.checked);
+    if (checked) select.value = checked.value;
   }
 
-  // Apply sync for all required radio-to-select mappings
   syncRadioToSelect("roadsideAssistance", "00NU700000618hd");
   syncRadioToSelect("primaryLocation", "00NU7000007QqVB");
   syncRadioToSelect("loanLeasePayoff", "00NU7000007Qqzp");
   syncRadioToSelect("vinKnown", "00NU7000006NiT7");
   syncRadioToSelect("ridesharing", "00NU7000007QIDN");
 
-  // Show/Hide Purchase Date field for Loan/Lease Payoff = "Selected"
-  const loanLeasePayoffRadios = document.querySelectorAll('input[name="loanLeasePayoff"]');
-  const purchaseDateField = document.getElementById("purchaseDateField");
-  function updatePurchaseDateVisibility() {
-    const selected = Array.from(loanLeasePayoffRadios).find(r => r.checked);
-    purchaseDateField.classList.toggle("hidden", !selected || selected.value !== "Selected");
-  }
-  loanLeasePayoffRadios.forEach(r => r.addEventListener("change", updatePurchaseDateVisibility));
-  updatePurchaseDateVisibility();
+  /* ================= PURCHASE DATE VISIBILITY ================= */
 
-  // Validation and dialog logic
-  const reviewBtn = document.getElementById("reviewBtn");
-  const dialog = document.getElementById("dialog");
-  const dialogTitle = document.getElementById("dialogTitle");
-  const missingFieldsList = document.getElementById("missingFieldsList");
-  const proceedBtn = document.getElementById("proceedBtn");
-  const editBtn = document.getElementById("editBtn");
+  const loanLeaseRadios = document.querySelectorAll('input[name="loanLeasePayoff"]');
+  const purchaseDateField = document.getElementById("purchaseDateField");
+
+  function togglePurchaseDate() {
+    const selected = [...loanLeaseRadios].find(r => r.checked && r.value === "Selected");
+    purchaseDateField.classList.toggle("hidden", !selected);
+  }
+  loanLeaseRadios.forEach(r => r.addEventListener("change", togglePurchaseDate));
+  togglePurchaseDate();
+
+  /* ================= FORM CAPTURE ADDITION ================= */
+
   const form = document.getElementById("mainForm");
 
-  // Add hidden field for summary data
-  const formDataJsonInput = document.createElement("input");
-  formDataJsonInput.type = "hidden";
-  formDataJsonInput.name = "Form_Captured_Data__c";
-  formDataJsonInput.id = "formDataJson";
-  form.appendChild(formDataJsonInput);
+  const formDataField = document.createElement("input");
+  formDataField.type = "hidden";
+  formDataField.name = "Form_Captured_Data__c";
+  form.appendChild(formDataField);
 
-  function mustFill(name, label, type = null) {
-    return { name, label, type };
-  }
-  function mustRadio(name, label) {
-    return { radio: name, label };
-  }
-  function getRequiredFields() {
-    const fields = [
-      mustFill("email", "Email", "email"),
-      mustRadio("requestTypeRadios", "Select the Request Type:"),
-      mustFill("00NU7000005zuX3", "Policy Number"),
-      mustFill("00NU7000005zuLl", "Effective Date (MM/DD/YYYY)", "date"),
-      mustFill("00NU7000007QI0T", "Year of Vehicle to Add"),
-      mustRadio("vinKnown", "Do you know the VIN of the New Vehicle?"),
-      mustFill("00NU7000006Knh3", "VIN Number"),
-      mustRadio("ridesharing", "Do you also use this vehicle for Ridesharing?"),
-      mustFill("00NU7000007QqQM", "Annual mileage"),
-      mustFill("00NU700000618Xx", "Primary Use"),
-      mustRadio("primaryLocation", "Primary Location"),
-      mustFill("00NU700000616cb", "Vehicle financed, leased or owned"),
-      mustFill("00NU7000007QpCX", "Length of vehicle ownership"),
-      mustFill("00NU700000618bB", "Comprehensive"),
-      mustFill("00NU700000618cn", "Collision"),
-      mustFill("00NU700000618eP", "Rental Reimbursement"),
-      mustRadio("roadsideAssistance", "Roadside Assistance"),
-      mustFill("00NU7000007QrCj", "Custom Parts and/or Equipment value"),
-      mustRadio("loanLeasePayoff", "Loan/Lease Payoff"),
+  const missingDataField = document.createElement("input");
+  missingDataField.type = "hidden";
+  missingDataField.name = "Form_Missing_Data__c";
+  form.appendChild(missingDataField);
+
+  /* ================= REQUIRED FIELD ENGINE ================= */
+
+  function mustFill(id, label, type=null){ return {id,label,type}; }
+  function mustRadio(name,label){ return {radio:name,label}; }
+
+  function getRequiredFields(){
+    const f = [
+      mustFill("email","Email","email"),
+      mustRadio("requestTypeRadios","Select the Request Type:"),
+      mustFill("00NU7000005zuX3","Policy Number"),
+      mustFill("00NU7000005zuLl","Effective Date (MM/DD/YYYY)","date"),
+      mustFill("00NU7000007QI0T","Year of Vehicle to Add"),
+      mustRadio("vinKnown","Do you know the VIN of the New Vehicle?"),
+      mustFill("00NU7000006Knh3","VIN Number"),
+      mustRadio("ridesharing","Do you also use this vehicle for Ridesharing?"),
+      mustFill("00NU7000007QqQM","Annual mileage"),
+      mustFill("00NU700000618Xx","Primary Use"),
+      mustRadio("primaryLocation","Primary Location"),
+      mustFill("00NU700000616cb","Vehicle financed, leased or owned"),
+      mustFill("00NU7000007QpCX","Length of vehicle ownership"),
+      mustFill("00NU700000618bB","Comprehensive"),
+      mustFill("00NU700000618cn","Collision"),
+      mustFill("00NU700000618eP","Rental Reimbursement"),
+      mustRadio("roadsideAssistance","Roadside Assistance"),
+      mustFill("00NU7000007QrCj","Custom Parts and/or Equipment value"),
+      mustRadio("loanLeasePayoff","Loan/Lease Payoff"),
     ];
+
     if (primaryUse.value === "Commute") {
-      fields.push(mustFill("00NU7000006AXyX", "Current number of days commuting to work or school"));
-      fields.push(mustFill("00NU7000006AY3N", "Miles one way to work or school"));
+      f.push(mustFill("00NU7000006AXyX","Current number of days commuting to work or school"));
+      f.push(mustFill("00NU7000006AY3N","Miles one way to work or school"));
     }
+
     if (getRadioValue("primaryLocation") === "other") {
-      fields.push(mustFill("00NU7000006Drkb", "Primary location address 1"));
-      fields.push(mustFill("00NU7000005zvUj", "City"));
-      fields.push(mustFill("00NU7000006cbfp", "Zip Code"));
+      f.push(mustFill("00NU7000006Drkb","Primary location address 1"));
+      f.push(mustFill("00NU7000005zvUj","City"));
+      f.push(mustFill("00NU7000006cbfp","Zip Code"));
     }
+
     if (financedSelect.value === "Lease" || financedSelect.value === "Own and make payments") {
-      fields.push(mustFill("00NU7000007QpKb", "Lienholder Name"));
-      fields.push(mustFill("00NU7000007QpPR", "Address 1"));
-      fields.push(mustFill("00NU7000007QpcL", "City"));
-      fields.push(mustFill("00NU7000005zvWL", "State"));
-      fields.push(mustFill("00NU7000007QfZm", "ZIP code"));
+      f.push(mustFill("00NU7000007QpKb","Lienholder Name"));
+      f.push(mustFill("00NU7000007QpPR","Address 1"));
+      f.push(mustFill("00NU7000007QpcL","City"));
+      f.push(mustFill("00NU7000005zvWL","State"));
+      f.push(mustFill("00NU7000007QfZm","ZIP code"));
     }
-    if (Array.from(document.querySelectorAll('input[name="loanLeasePayoff"]')).find(r => r.checked && r.value === "Selected")) {
-      fields.push(mustFill("00NU7000007Vz4n", "Please Enter Purchase Date", "date"));
+
+    if ([...loanLeaseRadios].find(r => r.checked && r.value === "Selected")) {
+      f.push(mustFill("00NU7000007Vz4n","Please Enter Purchase Date","date"));
     }
-    return fields;
+
+    return f;
   }
 
-  function validateFields() {
-    const missing = [];
-    const completed = [];
-    getRequiredFields().forEach(field => {
-      if (field.radio) {
-        const radios = document.querySelectorAll(`input[name="${field.radio}"]`);
-        if (!radios.length) return;
-        const checked = [...radios].some(r => r.checked);
-        if (!checked) {
-          missing.push(field.label);
-        } else {
-          const checkedVal = Array.from(radios).find(r => r.checked).value;
-          completed.push(`${field.label} = ${checkedVal}`);
-        }
-        return;
-      }
-      const el = document.getElementById(field.name);
-      if (!el) return;
-      const val = el.value.trim();
-      if (field.type === "email") {
-        if (!val || !el.checkValidity()) {
-          missing.push(field.label);
-        } else {
-          completed.push(`${field.label} = ${val}`);
-        }
-      } else if (field.type === "date") {
-        const dateRegex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(1[0-9]{3}|2[0-9]{3}|30[0-9]{2})$/;
-        if (!val || !dateRegex.test(val)) {
-          missing.push(field.label);
-        } else {
-          completed.push(`${field.label} = ${val}`);
-        }
-      } else if (el.tagName === "SELECT") {
-        if (!val) {
-          missing.push(field.label);
-        } else {
-          completed.push(`${field.label} = ${val}`);
-        }
-      } else {
-        if (!val) {
-          missing.push(field.label);
-        } else {
-          completed.push(`${field.label} = ${val}`);
-        }
-      }
-    });
-    return { missing, completed };
-  }
-
-  function getFieldInputValue(field) {
-    if (field.radio) {
-      const radios = document.querySelectorAll(`input[name="${field.radio}"]`);
-      const checked = Array.from(radios).find(r => r.checked);
-      return checked ? checked.value : "";
-    }
-    const el = document.getElementById(field.name);
+  function getValue(field){
+    if (field.radio) return getRadioValue(field.radio);
+    const el = document.getElementById(field.id);
     return el ? el.value.trim() : "";
   }
 
-  reviewBtn.addEventListener("click", () => {
-    const { missing, completed } = validateFields();
-    const missingData = [];
-    const completedData = [];
-
-    getRequiredFields().forEach(field => {
-      const val = getFieldInputValue(field);
-      if (!val) {
-        missingData.push(`${field.label}${val ? " = " + val : ""}`);
-      } else {
-        completedData.push(`${field.label} = ${val}`);
-      }
+  function validateFields(){
+    const missing=[], completed=[];
+    getRequiredFields().forEach(field=>{
+      const val=getValue(field);
+      if(!val) missing.push(field.label);
+      else completed.push(`${field.label} = ${val}`);
     });
+    return {missing,completed};
+  }
 
-    const formatted = `Missing Data - \n[${missingData.join(",\n")}]\nCompleted Data-\n [${completedData.join(",\n")}]`;
-    formDataJsonInput.value = formatted;
+  /* ================= DIALOG & SUBMIT ================= */
 
-    if (missing.length) {
-      dialogTitle.textContent = "Below Mandatory Fields are missing and the Team will contact you shortly.";
-      missingFieldsList.innerHTML = missing.map(f => `<li>${f}</li>`).join("");
+  const reviewBtn=document.getElementById("reviewBtn");
+  const dialog=document.getElementById("dialog");
+  const dialogTitle=document.getElementById("dialogTitle");
+  const missingList=document.getElementById("missingFieldsList");
+  const proceedBtn=document.getElementById("proceedBtn");
+  const editBtn=document.getElementById("editBtn");
+
+  reviewBtn.addEventListener("click",()=>{
+    const {missing,completed}=validateFields();
+    formDataField.value=completed.join('\n');
+    missingDataField.value=missing.join('\n');
+
+    if(missing.length){
+      dialogTitle.textContent="Below Mandatory Fields are missing and the Team will contact you shortly.";
+      missingList.innerHTML=missing.map(x=>`<li>${x}</li>`).join("");
     } else {
-      dialogTitle.textContent = "All mandatory fields are completed. Ready to submit your request?";
-      missingFieldsList.innerHTML = "";
+      dialogTitle.textContent="All mandatory fields are completed. Ready to submit your request?";
+      missingList.innerHTML="";
     }
     dialog.classList.remove("hidden");
   });
 
-  editBtn.addEventListener("click", () => { dialog.classList.add("hidden"); });
-  proceedBtn.addEventListener("click", () => { dialog.classList.add("hidden"); form.submit(); });
+  editBtn.addEventListener("click",()=>dialog.classList.add("hidden"));
+  proceedBtn.addEventListener("click",()=>{ dialog.classList.add("hidden"); form.submit(); });
 
-  window.addEventListener("click", (e) => { if (e.target === dialog) dialog.classList.add("hidden"); });
-  window.addEventListener("keydown", (e) => { if (e.key === "Escape" && !dialog.classList.contains("hidden")) dialog.classList.add("hidden"); });
+  window.addEventListener("click",e=>{ if(e.target===dialog) dialog.classList.add("hidden"); });
+  window.addEventListener("keydown",e=>{ if(e.key==="Escape") dialog.classList.add("hidden"); });
+
 });
 </script>
 </body>
